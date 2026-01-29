@@ -1,0 +1,54 @@
+<div class="container min-vh-100 d-flex align-items-center justify-content-center">
+
+  <div class="card emi-glass shadow-lg border-0 w-100 login-card">
+
+    <!-- HEADER -->
+    <div class="card-header bg-transparent border-0 text-center py-4">
+      <h2 class="fw-bold mb-1">Welcome Back</h2>
+      <p class="text-muted mb-0">Login to your account</p>
+    </div>
+
+    <div class="card-body px-4 px-md-5 py-4">
+
+      <form (ngSubmit)="login()">
+
+        <div class="mb-3">
+          <label for="email" class="form-label small">Email Address</label>
+          <input
+            [(ngModel)]="user.email"
+            name="email"
+            type="text"
+            id="email"
+            class="form-control"
+            placeholder="you@example.com"
+          >
+        </div>
+
+        <div class="mb-4">
+          <label for="password" class="form-label small">Password</label>
+          <input
+            [(ngModel)]="user.password"
+            name="password"
+            type="password"
+            id="password"
+            class="form-control"
+            placeholder="••••••••"
+          >
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 py-2">
+          Login
+        </button>
+
+      </form>
+
+      <p class="text-center mt-4 mb-0 text-muted">
+        Don’t have an account?
+        <a href="" class="fw-semibold text-decoration-none">Register</a>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

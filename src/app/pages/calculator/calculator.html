@@ -1,0 +1,88 @@
+<div class="container min-vh-100 d-flex align-items-center justify-content-center">
+
+  <div class="card emi-glass shadow-lg border-0 w-100">
+    
+    <!-- HEADER -->
+    <div class="card-header bg-transparent border-0 text-center py-4">
+      <h2 class="fw-bold mb-1">EMI Calculator</h2>
+      <p class="text-muted mb-0">Calculate your loan EMI instantly</p>
+    </div>
+
+    <div class="card-body px-4 px-md-5 py-4">
+
+      <div class="row g-5">
+
+        <!-- LEFT COLUMN - INPUTS -->
+        <div class="col-md-6">
+
+          <h6 class="text-uppercase text-muted fw-semibold mb-3">
+            Loan Details
+          </h6>
+
+          <div class="mb-3">
+            <label class="form-label small">Loan Amount (₹)</label>
+            <div class="input-group">
+              <span class="input-group-text">₹</span>
+              <input type="number" class="form-control" [(ngModel)]="principal">
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label small">Interest Rate (% per year)</label>
+            <div class="input-group">
+              <input type="number" class="form-control" [(ngModel)]="rate">
+              <span class="input-group-text">%</span>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="form-label small">Tenure (Months)</label>
+            <input type="number" class="form-control" [(ngModel)]="tenure">
+          </div>
+
+          <div class="d-grid gap-2 d-md-flex">
+            <button class="btn btn-primary px-4 py-2 flex-fill" (click)="calculateEMI()">
+              Calculate EMI
+            </button>
+            <button class="btn btn-outline-secondary px-4 py-2 flex-fill" (click)="reset()">
+              Reset
+            </button>
+          </div>
+
+        </div>
+
+        <!-- RIGHT COLUMN - RESULTS -->
+        <div class="col-md-6 d-flex align-items-center">
+
+          <div class="result-card w-100 p-4 rounded-4">
+
+            <h6 class="text-uppercase  fw-semibold mb-3">
+              Result Summary
+            </h6>
+
+            <div class="result-row">
+              <span>Monthly EMI</span>
+              <strong>₹{{ emi }}</strong>
+            </div>
+
+            <div class="result-row">
+              <span>Total Interest</span>
+              <strong>₹{{ totalInterest }}</strong>
+            </div>
+
+            <div class="result-row">
+              <span>Total Payment</span>
+              <strong>₹{{ totalAmount }}</strong>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

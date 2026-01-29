@@ -1,0 +1,13 @@
+.hero-section {
+  min-height: 70vh;
+  background: linear-gradient(135deg, #f8f9ff, #ffffff);
+  display: flex;
+  align-items: center;
+}
+
+/* Gradient text (already in your theme) */
+.brand-gradient {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+}

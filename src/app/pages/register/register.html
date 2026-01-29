@@ -1,0 +1,66 @@
+<div class="container min-vh-100 d-flex align-items-center justify-content-center">
+
+  <div class="card emi-glass shadow-lg border-0 w-100 login-card">
+
+    <!-- HEADER -->
+    <div class="card-header bg-transparent border-0 text-center py-4">
+      <h2 class="fw-bold mb-1">Create Account</h2>
+      <p class="text-muted mb-0">Start calculating your EMIs smarter</p>
+    </div>
+
+    <div class="card-body px-4 px-md-5 py-4">
+
+      <form (ngSubmit)="register()">
+
+        <div class="mb-3">
+          <label for="username" class="form-label small">Username</label>
+          <input
+            [(ngModel)]="user.username"
+            name="username"
+            type="text"
+            id="username"
+            class="form-control"
+            placeholder="Your name"
+          >
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label small">Email Address</label>
+          <input
+            [(ngModel)]="user.email"
+            name="email"
+            type="text"
+            id="email"
+            class="form-control"
+            placeholder="you@example.com"
+          >
+        </div>
+
+        <div class="mb-4">
+          <label for="password" class="form-label small">Password</label>
+          <input
+            [(ngModel)]="user.password"
+            name="password"
+            type="password"
+            id="password"
+            class="form-control"
+            placeholder="••••••••"
+          >
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 py-2">
+          Create Account
+        </button>
+
+      </form>
+
+      <p class="text-center mt-4 mb-0 text-muted">
+        Already have an account?
+        <a href="/login" class="fw-semibold text-decoration-none">Login</a>
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

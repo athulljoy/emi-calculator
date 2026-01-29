@@ -1,0 +1,23 @@
+/* Footer base */
+.emi-footer {
+  background: linear-gradient(135deg, #ffffff, #f8f9ff);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Footer links */
+.footer-link {
+  color: #555;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.footer-link:hover {
+  color: #4f46e5;
+}
+
+/* Gradient brand reused */
+.brand-gradient {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  /* -webkit-background-clip: text; */
+  -webkit-text-fill-color: transparent;
+}
