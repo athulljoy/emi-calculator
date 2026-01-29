@@ -19,7 +19,7 @@ export class Register {
 
   register(){
     if(this.user.username && this.user.email && this.user.password){
-      alert("reg successful")
+      alert("registration successful")
       sessionStorage.setItem("userDetails", JSON.stringify(this.user))
       this.router.navigate(['/login'])
     }
