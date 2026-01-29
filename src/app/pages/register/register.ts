@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -14,10 +15,13 @@ export class Register {
     password: ""
   }
 
+  constructor(private router: Router) {}
+
   register(){
     if(this.user.username && this.user.email && this.user.password){
       alert("reg successful")
       sessionStorage.setItem("userDetails", JSON.stringify(this.user))
+      this.router.navigate(['/login'])
     }
     else {
       alert("fill all the fields")
