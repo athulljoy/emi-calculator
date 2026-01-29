@@ -5,6 +5,11 @@
   align-items: center;
 }
 
+.btn-primary {
+  background: linear-gradient(135deg, #4f46e5, #6366f1);
+  border: none;
+}
+
 /* Gradient text (already in your theme) */
 .brand-gradient {
   background: linear-gradient(135deg, #4f46e5, #6366f1);
